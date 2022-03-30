@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+        height: 40em;
+      }
+      .about {
+        border: 2px solid goldenrod;
+      }
+      .partners {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+      .partners div {
+        border: 1px solid blueviolet;
+        width: 199px;
+        height: 123px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .hero-section .partners div img {
+        height: 130px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero-section">
+      <section class="about">
+        <p class="aboutus">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+          mollitia placeat non quos, tempora vero quaerat consequuntur
+          distinctio atque sunt quisquam vel ex expedita dolorum! Amet,
+          officiis. Eos dicta, ex libero provident excepturi, minus rem corporis
+          voluptas ullam iste quia ipsam laborum maiores autem veritatis!
+        </p>
+      </section>
+      <section class="partners">
+        <div class="one"><img src="/pics/partners/aclass.png" alt="" /></div>
+        <div class="two"><img src="/pics/partners/chro.jpg" alt="" /></div>
+        <div class="three"><img src="/pics/partners/igln.jpg" alt="" /></div>
+        <div class="four"><img src="/pics/partners/inger.jpg" alt="" /></div>
+        <div class="five"><img src="/pics/partners/amtoi.jpg" alt="" /></div>
+        <div class="six"><img src="/pics/partners/rishi.jpg" alt="" /></div>
+        <div class="seven"><img src="/pics/partners/mewar.jpg" alt="" /></div>
+        <div class="eight"><img src="/pics/partners/rubanm.jpg" alt="" /></div>
+        <div class="nine"><img src="/pics/partners/wca.jpg" alt="" /></div>
+      </section>
+    </section>
+  </body>
+</html>

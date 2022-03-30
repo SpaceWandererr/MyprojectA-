@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+:root {
+  --clr: #222327;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #0c85d6; */
+  margin: 0px;
+  padding: 5px 0px 0px 0px;
+  border: 2px solid red;
+  background-color: var(--clr);
+  height: 140px;
+}
+.logo {
+  cursor: pointer;
+  width: 400px;
+  height: 80px;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 33px;
+  color: #20ec0d;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  background: url(/pics/homebg.jpeg);
+  background-size: cover;
+  z-index: -1;
+  height: 20%;
+  width: 20%;
+  transform: scale(5);
+  transform-origin: top left;
+  filter: blur(0.1px);
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  height: 40em;
+  border: 10px solid rebeccapurple;
+  overflow: hidden;
+}
+
+.hero-section .about{
+  border: 3px ridge;
+}
+.partners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.hero-section .partners div img {
+  height: 130px;
+  width: 200px;
+}
+.partners div {
+  border: 1px solid red;
+  width: 199px;
+  height: 123px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
