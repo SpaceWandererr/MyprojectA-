@@ -143,11 +143,14 @@ ul li {
 .text {
   color: #f2f2f2;
   font-size: 15px;
-  padding: 8px 12px;
+  padding:"";
   position: absolute;
-  bottom: 8px;
+  /* bottom: inherit; */
   width: 100%;
   text-align: center;
+  right: inherit;
+  top: 100px;
+  right: 100px;
 }
 .numbertext {
   color: #c08686;
@@ -156,4 +159,24 @@ ul li {
   position: absolute;
   top: inherit;
   right:1100px;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(5, 5, 5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
