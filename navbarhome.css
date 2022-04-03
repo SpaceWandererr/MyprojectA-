@@ -12,6 +12,7 @@
 .navbar{
   padding-top: 15px;
   position: sticky;
+  top:0px;
 }
 header {
   display: flex;

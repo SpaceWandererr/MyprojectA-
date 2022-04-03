@@ -16,15 +16,16 @@ html {
 body::before {
   content: "";
   position: absolute;
-  /* background: url(/pics/homebg.jpeg); */
+  background: url(/pics/homebg.jpeg);
   background-size: cover;
+  background-repeat: no-repeat;
   z-index: -1;
-  height: 20%;
+  height:20%;
   width: 20%;
   transform: scale(5);
   transform-origin: top left;
-  filter: blur(0.1px);
-  background-color: var(--clr);
+  filter: blur(0.6px);
+  /* background-color: var(--clr); */
 }
 
 .hero-section {
@@ -201,4 +202,10 @@ body::before {
 
 main {
   margin-top: 35px;
+}
+
+.scroller{
+  padding-top: 20px;
+  font-size: medium;
+  font-weight: 900;
 }
