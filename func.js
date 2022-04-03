@@ -4,11 +4,7 @@ function activeLink() {
   this.classList.add("active");
 }
 list.forEach((item) => item.addEventListener("click", activeLink));
-
-<<<<<<< HEAD
 //for our service sliding
-=======
->>>>>>> 5e517dc4dd92996f8321d3d4f36c4c7bd22e31e4
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -32,11 +28,9 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-<<<<<<< HEAD
     dots[i].className = dots[i].className.replace("active", "");
-=======
+
     dots[i].className = dots[i].className.replace(" active", "");
->>>>>>> 5e517dc4dd92996f8321d3d4f36c4c7bd22e31e4
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
