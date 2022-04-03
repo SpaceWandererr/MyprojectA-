@@ -4,6 +4,8 @@ function activeLink() {
   this.classList.add("active");
 }
 list.forEach((item) => item.addEventListener("click", activeLink));
+
+
 //for our service sliding
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -35,3 +37,11 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+
+// for sticky navbar
+
+window.addEventListener("scroll", function(){
+  var header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 0);
+})
