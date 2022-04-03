@@ -63,7 +63,7 @@ body {
   transform: translateY(-32px);
 }
 
-.navigation ul li a .text {
+.navigation ul li a .textt {
   position: absolute;
   color: var(--clr);
   font-weight: 400;
@@ -83,7 +83,7 @@ body {
   left: 10px;
 }
 
-.navigation ul li.active a .text {
+.navigation ul li.active a .textt {
   opacity: 1;
   transform: translateY(10px);
 }

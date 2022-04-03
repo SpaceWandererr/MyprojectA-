@@ -1,21 +1,15 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 
 :root {
   --clr: #222327;
 }
 
-body {
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: var(--clr);
-}
+  background: var(--clr); 
+}*/
 
 .navigation {
   position: relative;
@@ -66,7 +60,7 @@ body {
   transform: translateY(-32px);
 }
 
-.navigation ul li a .text {
+.navigation ul li a .textt {
   position: absolute;
   color: var(--clr);
   font-weight: 400;
@@ -77,9 +71,9 @@ body {
   transform: translateY(20px);
 }
 
-.navigation ul li.active a .text {
+.navigation ul li.active a .textt {
   opacity: 1;
-  transform: translateY(10px);
+  transform: translateY(-102px);
 }
 .indicator {
   position: absolute;
