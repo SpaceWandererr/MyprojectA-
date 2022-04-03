@@ -9,10 +9,35 @@
   --clr: #222327;
 }
 
-body {
-  /* min-height: 100vh; */
-  background: var(--clr);
+.navbar{
+  padding-top: 15px;
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #0c85d6; */
+  margin: 0px;
+  /* padding: 5px; */
+  border: 2px solid red;
+  /* background-color: var(--clr); */
+  height: 126px;
+}
+.logo {
+  cursor: pointer;
+  width: 400px;
+  height: 80px;
+  background-color: #fff;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 33px;
+  color: #20ec0d;
+}
+
 .navigation {
   position: relative;
   width: 400px;
