@@ -101,6 +101,8 @@ ul li {
   color: antiquewhite;
 }
 
+/* Hero-section starts here */
+
 .hero-section .about div img {
   width: 100%;
   height: 100%;
@@ -119,10 +121,6 @@ ul li {
 .hero-section .about h1 {
   content: "";
 }
-/* .about .road {
-  color: aliceblue;
-} */
-
 .text {
   color: var(--clr);
   font-size: 15px;
@@ -189,86 +187,13 @@ ul li {
   align-items: center;
   width: -webkit-fill-available;
 }
-
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: rgb(241, 11, 11);
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-.next {
-  right: 618px;
-  border-radius: 3px 0 0 3px;
-}
-.prev:hover, .next:hover {
-  background-color: rgba(59, 168, 38, 0.8);
-  border-radius: 2px;
 }
 
-.hero-section .about div img{
-  width:100%;
-  height:360px;
-}
-.prev, .next {
-  cursor: pointer;
+.partners .ourPartners, .ourService{
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  /* left: 72%;
+  top: auto; */
+  font-size: large;
+  font-weight: 900;
+  color: aliceblue;
 }
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding:"";
-  position: absolute;
-  /* bottom: inherit; */
-  width: 100%;
-  text-align: center;
-  right: inherit;
-  top: 100px;
-  right: 100px;
-}
-.numbertext {
-  color: #c08686;
-  font-size: 12px;
-  /* padding: 8px 12px; */
-  position: absolute;
-  top: inherit;
-  right:1100px;
-}
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: rgb(5, 5, 5);
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1
-  }}}
