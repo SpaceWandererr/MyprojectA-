@@ -1,64 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <!---<title>3D Flip Card on Hover | CodingLab</title>---->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
     <style>
-      .hero-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: fit-content;
-        height: 40em;
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
       }
-      .about {
-        border: 2px solid goldenrod;
+      :root {
+        --clr: #222327;
       }
-      .partners {
+      html,
+      body {
+        /* display: grid; */
+        height: 100%;
+        width: 100%;
+        /* place-items: center; */
+        background: linear-gradient(375deg, #24a6af, #222327);
+      }
+      header{
+        background-color: var(--clr);
+      }
+      .container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-      }
-      .partners div {
-        border: 1px solid blueviolet;
-        width: 199px;
-        height: 123px;
-        display: flex;
-        justify-content: center;
+        margin-top: 50px;
+        border: 2px solid red;
+        justify-items: center;
         align-items: center;
-        overflow: hidden;
       }
-
-      .hero-section .partners div img {
-        height: 130px;
-        width: 200px;
+      ::selection {
+        color: #fff;
+        background: #1cc7d0;
+      }
+      .wrapper {
+        height: 400px;
+        width: 320px;
+        position: relative;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+      }
+      .wrapper .card {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding: 5px;
+        background: #222327;
+        color: #fff;
+        border-radius: 10px;
+        transform: translateY(0deg);
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      }
+      .wrapper:hover > .front-face {
+        transform: rotateY(-180deg);
+      }
+      .wrapper .card img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .wrapper .back-face {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        transform: rotateY(180deg);
+      }
+      .wrapper:hover > .back-face {
+        transform: rotateY(0deg);
+      }
+      .wrapper .back-face img {
+        height: 150px;
+        width: 150px;
+        padding: 5px;
+        border-radius: 50%;
+        background: linear-gradient(375deg, #1cc7d0, #2ede98);
+      }
+      .wrapper .back-face .info {
+        text-align: center;
+      }
+      .back-face .info .title {
+        font-size: 30px;
+        font-weight: 500;
+      }
+      .back-face ul {
+        display: flex;
+      }
+      .back-face ul a {
+        display: block;
+        height: 40px;
+        width: 40px;
+        color: #fff;
+        text-align: center;
+        margin: 0 5px;
+        line-height: 38px;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        background: linear-gradient(375deg, #1cc7d0, #2ede98);
+        transition: all 0.5s ease;
+      }
+      .back-face ul a:hover {
+        color: #1cc7d0;
+        border-color: #1cc7d0;
+        background: linear-gradient(375deg, transparent, transparent);
       }
     </style>
+    <link rel="stylesheet" href="/navbarhome.css" />
   </head>
   <body>
-    <section class="hero-section">
-      <section class="about">
-        <p class="aboutus">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          mollitia placeat non quos, tempora vero quaerat consequuntur
-          distinctio atque sunt quisquam vel ex expedita dolorum! Amet,
-          officiis. Eos dicta, ex libero provident excepturi, minus rem corporis
-          voluptas ullam iste quia ipsam laborum maiores autem veritatis!
-        </p>
-      </section>
-      <section class="partners">
-        <div class="one"><img src="/pics/partners/aclass.png" alt="" /></div>
-        <div class="two"><img src="/pics/partners/chro.jpg" alt="" /></div>
-        <div class="three"><img src="/pics/partners/igln.jpg" alt="" /></div>
-        <div class="four"><img src="/pics/partners/inger.jpg" alt="" /></div>
-        <div class="five"><img src="/pics/partners/amtoi.jpg" alt="" /></div>
-        <div class="six"><img src="/pics/partners/rishi.jpg" alt="" /></div>
-        <div class="seven"><img src="/pics/partners/mewar.jpg" alt="" /></div>
-        <div class="eight"><img src="/pics/partners/rubanm.jpg" alt="" /></div>
-        <div class="nine"><img src="/pics/partners/wca.jpg" alt="" /></div>
-      </section>
-    </section>
+    <!-- Header Section starts here -->
+    <header>
+      <img src="/pics/asllogo.png" alt="asllogo" class="logo" />
+      <nav class="navbar">
+        <div class="navigation">
+          <ul>
+            <li class="list active">
+              <a href="/mainPage.html" target="blank">
+                <span class="icon">
+                  <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="textt">Home</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">
+                <span class="icon">
+                  <ion-icon name="people-outline"></ion-icon>
+                </span>
+                <span class="textt">Team</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">
+                <span class="icon">
+                  <ion-icon name="cog-outline"></ion-icon>
+                </span>
+                <span class="textt service">Services</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">
+                <span class="icon">
+                  <ion-icon name="people-outline"></ion-icon>
+                </span>
+                <span class="textt service">Contact</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">
+                <span class="icon">
+                  <ion-icon name="book-outline"></ion-icon>
+                </span>
+                <span class="textt service">About</span>
+              </a>
+            </li>
+            <div class="indicator"></div>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Header Section ends here -->
+    <!-- Main section starts here -->
+    <div class="container">
+      <div class="wrapper">
+        <div class="card front-face">
+          <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
+        </div>
+        <div class="card back-face">
+          <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
+          <div class="info">
+            <div class="title">Jay Thakur</div>
+            <p>User interface designer and <br />front-end developer</p>
+          </div>
+          <ul>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="card front-face">
+          <img src="/pics/Team/Hiteshsir.jpeg" alt="Flip Card" />
+        </div>
+        <div class="card back-face">
+          <img src="/pics/Team/Hiteshsir.jpeg" alt="Flip Card" />
+          <div class="info">
+            <div class="title">Hitesh Yadav</div>
+            <p>Bussiness Devlopment Manager & <br />Import Forwarding Head</p>
+          </div>
+          <ul>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="card front-face">
+          <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
+        </div>
+        <div class="card back-face">
+          <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
+          <div class="info">
+            <div class="title">ASHOK GUNTA</div>
+            <p>Import Console<br />Import Console Head</p>
+          </div>  
+          <ul>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script starts here -->
+    <script src="/func.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

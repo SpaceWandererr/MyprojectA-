@@ -14,7 +14,7 @@
   position: sticky;
   top:0px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding-left: 25px;
 }
