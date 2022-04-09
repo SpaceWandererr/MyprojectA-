@@ -39,6 +39,12 @@
         justify-items: center;
         align-items: center;
       }
+      .front{
+        position: inherit;
+        background-color: #222327;
+        border-radius: 0px 0px 10px 0px;
+        padding-right:5px;
+      }
       ::selection {
         color: #fff;
         background: #1cc7d0;
@@ -49,6 +55,7 @@
         position: relative;
         transform-style: preserve-3d;
         perspective: 1000px;
+        overflow: hidden;
       }
       .wrapper .card {
         position: absolute;
@@ -178,6 +185,7 @@
     <div class="container">
       <div class="wrapper">
         <div class="card front-face">
+          <div class="front">Jay Thakur</div>
           <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
         </div>
         <div class="card back-face">
@@ -196,6 +204,7 @@
       </div>
       <div class="wrapper">
         <div class="card front-face">
+          <div class="front">Hitesh Yadav</div>
           <img src="/pics/Team/Hiteshsir.jpeg" alt="Flip Card" />
         </div>
         <div class="card back-face">
@@ -214,6 +223,7 @@
       </div>
       <div class="wrapper">
         <div class="card front-face">
+          <div class="front">ASHOK GUNTA</div>
           <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
         </div>
         <div class="card back-face">
