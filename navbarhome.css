@@ -20,9 +20,9 @@
 }
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  /* background-color: #0c85d6; */
+  /* background-color: #0c85d6,8; */
   margin: 0px;
   /* padding: 5px; */
   border: 2px solid red;
@@ -41,7 +41,7 @@ ul li {
   display: inline-block;
   font-size: 20px;
   margin-right: 33px;
-  color: #20ec0d;
+  color: #3781E3;
 }
 
 .navigation {
@@ -123,7 +123,7 @@ ul li {
   top: -50%;
   width: 70px;
   height: 70px;
-  background: #29fd53; /* */
+  background: #1E90FF;/*107bdf; */
   border-radius: 50%;
   border: 6px solid var(--clr);
   transition: 0.5s;
