@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --clr: #222327;
+}
+html,
+body {
+  /* display: grid; */
+  /* height: 100%; */
+  width: 100%;
+  /* place-items: center; */
+  background: linear-gradient(375deg, var(--clr), #222327);
+}
+header {
+  background-color: var(--clr);
+}
+/* Directors section starts */
+.directore {
+  margin: 0px;
+  padding: 3px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1,1fr);
+  row-gap: 5px;
+  height: 100%;
+  width:-webkit-fill-available;
+}
+.title h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 160px;
+  text-align: center;
+  margin: auto;
+  white-space: nowrap;
+  padding-bottom: 13px;
+  color: #3781E3;
+}
+.title h1:before {
+  background-color: #c50000;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 75px;
+  margin-bottom: 5px;
+}
+.title h1:after {
+  background-color: #c50000;
+  content: "";
+  display: block;
+  position: relative;
+  left: 85px;
+  bottom: 0;
+  height: 3px;
+  width: 75px;
+  margin-bottom: 0.25em;
+}
+.title h1:hover {
+  border: 3px solid #c50000;
+  height: 55px;
+  width: 163px;
+  content: "";
+  display: block;
+  position: relative;
+  
+}
+/* Directors section Ends */
+/* Chennia section Ends */
+.Chennai{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,2fr);
+  row-gap: 5px;
+  padding-top: 1%;
+
+}
+.savan{
+grid-row-start:2;
+grid-row-end: 2;
+grid-column-start: 2;
+grid-column-end: 2;
+}
+/* Chennai section Ends */
+
+/* CSS of Cards starts */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 25px;
+  margin-top: 50px;
+  border: 2px solid red;
+  justify-items: center;
+  align-items: center;
+  font-size: 14px;
+}
+.front {
+  position: inherit;
+  background-color: #010127;
+  border-radius: 0px 0px 10px 0px;
+  padding-right: 5px;
+  font-size: 14px;
+}
+::selection {
+  color: #fff;
+  background: #1cc7d0;
+}
+.wrapper {
+  height: 400px;
+  width: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  overflow: hidden;
+}
+.wrapper .card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #010127;
+  color: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.wrapper:hover > .front-face {
+  transform: rotateY(-180deg);
+}
+.wrapper .card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrapper .back-face {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+.wrapper:hover > .back-face {
+  transform: rotateY(0deg);
+}
+.wrapper .back-face img {
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+.wrapper .back-face .info {
+  text-align: center;
+}
+.back-face .info .title {
+  font-size: 30px;
+  font-weight: 500;
+}
+.back-face ul {
+  display: flex;
+}
+.back-face ul a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 38px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+  transition: all 0.5s ease;
+  font-size: large;
+}
+.back-face ul a:hover {
+  color: #1cc7d0;
+  border-color: #1cc7d0;
+  background: linear-gradient(375deg, transparent, transparent);
+}
+/* CSS of Cards Ends */

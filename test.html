@@ -1,248 +1,304 @@
 <!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <!---<title>3D Flip Card on Hover | CodingLab</title>---->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Team</title>
+    <link rel="stylesheet" href="/navbarhome.css" />
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <link rel="stylesheet" href="/Mteam.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
-      :root {
-        --clr: #222327;
-      }
-      html,
-      body {
-        /* display: grid; */
-        height: 100%;
-        width: 100%;
-        /* place-items: center; */
-        background: linear-gradient(375deg, #24a6af, #222327);
-      }
-      header{
-        background-color: var(--clr);
-      }
-      .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        margin-top: 50px;
-        border: 2px solid red;
-        justify-items: center;
-        align-items: center;
-      }
-      .front{
-        position: inherit;
-        background-color: #222327;
-        border-radius: 0px 0px 10px 0px;
-        padding-right:5px;
-      }
-      ::selection {
-        color: #fff;
-        background: #1cc7d0;
-      }
-      .wrapper {
-        height: 400px;
-        width: 320px;
-        position: relative;
-        transform-style: preserve-3d;
-        perspective: 1000px;
-        overflow: hidden;
-      }
-      .wrapper .card {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        padding: 5px;
-        background: #222327;
-        color: #fff;
-        border-radius: 10px;
-        transform: translateY(0deg);
-        backface-visibility: hidden;
-        transform-style: preserve-3d;
-        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-      }
-      .wrapper:hover > .front-face {
-        transform: rotateY(-180deg);
-      }
-      .wrapper .card img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-      .wrapper .back-face {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-        transform: rotateY(180deg);
-      }
-      .wrapper:hover > .back-face {
-        transform: rotateY(0deg);
-      }
-      .wrapper .back-face img {
-        height: 150px;
-        width: 150px;
-        padding: 5px;
-        border-radius: 50%;
-        background: linear-gradient(375deg, #1cc7d0, #2ede98);
-      }
-      .wrapper .back-face .info {
-        text-align: center;
-      }
-      .back-face .info .title {
-        font-size: 30px;
-        font-weight: 500;
-      }
-      .back-face ul {
-        display: flex;
-      }
-      .back-face ul a {
-        display: block;
-        height: 40px;
-        width: 40px;
-        color: #fff;
-        text-align: center;
-        margin: 0 5px;
-        line-height: 38px;
-        border: 2px solid transparent;
-        border-radius: 50%;
-        background: linear-gradient(375deg, #1cc7d0, #2ede98);
-        transition: all 0.5s ease;
-      }
-      .back-face ul a:hover {
-        color: #1cc7d0;
-        border-color: #1cc7d0;
-        background: linear-gradient(375deg, transparent, transparent);
-      }
-    </style>
-    <link rel="stylesheet" href="/navbarhome.css" />
   </head>
   <body>
-    <!-- Header Section starts here -->
+      <!-- Header Section starts here -->
     <header>
       <img src="/pics/asllogo.png" alt="asllogo" class="logo" />
       <nav class="navbar">
-        <div class="navigation">
-          <ul>
-            <li class="list active">
-              <a href="/mainPage.html" target="blank">
-                <span class="icon">
-                  <ion-icon name="home-outline"></ion-icon>
-                </span>
-                <span class="textt">Home</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#">
-                <span class="icon">
-                  <ion-icon name="people-outline"></ion-icon>
-                </span>
-                <span class="textt">Team</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#">
-                <span class="icon">
-                  <ion-icon name="cog-outline"></ion-icon>
-                </span>
-                <span class="textt service">Services</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#">
-                <span class="icon">
-                  <ion-icon name="people-outline"></ion-icon>
-                </span>
-                <span class="textt service">Contact</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#">
-                <span class="icon">
-                  <ion-icon name="book-outline"></ion-icon>
-                </span>
-                <span class="textt service">About</span>
-              </a>
-            </li>
-            <div class="indicator"></div>
-          </ul>
-        </div>
+          <div class="navigation">
+              <ul>
+                  <li class="list active">
+                      <a href="#">
+                          <span class="icon">
+                              <ion-icon name="home-outline"></ion-icon>
+                          </span>
+                          <span class="textt">Home</span>
+                      </a>
+                  </li>
+                  <li class="list">
+                      <a href="#">
+                          <span class="icon">
+                              <ion-icon name="people-outline"></ion-icon>
+                          </span>
+                          <span class="textt">Team</span>
+                      </a>
+                  </li>
+                  <li class="list">
+                      <a href="#">
+                          <span class="icon">
+                              <ion-icon name="cog-outline"></ion-icon>
+                          </span>
+                          <span class="textt service">Services</span>
+                      </a>
+                  </li>
+                  <li class="list">
+                      <a href="#">
+                          <span class="icon">
+                              <ion-icon name="people-outline"></ion-icon>
+                          </span>
+                          <span class="textt service">Contact</span>
+                      </a>
+                  </li>
+                  <li class="list">
+                      <a href="#">
+                          <span class="icon">
+                              <ion-icon name="book-outline"></ion-icon>
+                          </span>
+                          <span class="textt service">About</span>
+                      </a>
+                  </li>
+                  <div class="indicator"></div>
+              </ul>
+          </div>
       </nav>
-    </header>
+  </header>
     <!-- Header Section ends here -->
     <!-- Main section starts here -->
-    <div class="container">
-      <div class="wrapper">
-        <div class="card front-face">
-          <div class="front">Jay Thakur</div>
-          <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
-        </div>
-        <div class="card back-face">
-          <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
-          <div class="info">
-            <div class="title">Jay Thakur</div>
-            <p>User interface designer and <br />front-end developer</p>
+    <main>
+      <!-- Directors section starts -->
+      <div class="directore" style="border: 2px solid red;">
+        <span class="title"><h1>Directors</h1></span>
+        <div class="wrapper">
+          <div class="card front-face">
+            <div class="front">Vinay Tripathi</div>
+            <img src="/pics/Team/VinayT.jpeg" alt="Flip Card" />
           </div>
-          <ul>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </ul>
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="card front-face">
-          <div class="front">Hitesh Yadav</div>
-          <img src="/pics/Team/Hiteshsir.jpeg" alt="Flip Card" />
-        </div>
-        <div class="card back-face">
-          <img src="/pics/Team/Hiteshsir.jpeg" alt="Flip Card" />
-          <div class="info">
-            <div class="title">Hitesh Yadav</div>
-            <p>Bussiness Devlopment Manager & <br />Import Forwarding Head</p>
+          <div class="card back-face">
+            <img src="/pics/Team/VinayT.jpeg" alt="Flip Card" />
+            <div class="info">
+              <div class="title">Vinay Tripathi</div>
+              <p>User interface designer and <br />front-end developer</p>
+            </div>
+            <ul>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </ul>
           </div>
-          <ul>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </ul>
+        </div>
+      
+        <div class="wrapper">
+          <div class="card front-face">
+            <div class="front">Vinay Tripathi</div>
+            <img src="/pics/Team/tjj.jpg" alt="Flip Card" />
+          </div>
+          <div class="card back-face">
+            <img src="/pics/Team/tjj.jpg" alt="Flip Card" />
+            <div class="info">
+              <div class="title">Vinay Tripathi</div>
+              <p>User interface designer and <br />front-end developer</p>
+            </div>
+            <ul>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="wrapper">
-        <div class="card front-face">
-          <div class="front">ASHOK GUNTA</div>
-          <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
+      <!-- Directors section Ends -->
+      <!-- Directors section Starts -->
+      <div class="directore" style="border: 2px solid red;">
+        <span class="title"><h1>Directors</h1></span>
+        <div class="wrapper">
+          <div class="card front-face">
+            <div class="front">Vinay Tripathi</div>
+            <img src="/pics/Team/tjj.jpg" alt="Flip Card" />
+          </div>
+          <div class="card back-face">
+            <img src="/pics/Team/tjj.jpg" alt="Flip Card" />
+            <div class="info">
+              <div class="title">Vinay Tripathi</div>
+              <p>User interface designer and <br />front-end developer</p>
+            </div>
+            <ul>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </ul>
+          </div>
         </div>
-        <div class="card back-face">
-          <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
-          <div class="info">
-            <div class="title">Ashok Gunta</div>
-            <p>Import Console<br />Import Console Head</p>
-          </div>  
-          <ul>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </ul>
+      
+        <div class="wrapper">
+          <div class="card front-face">
+            <div class="front">Vinay Tripathi</div>
+            <img src="/pics/Team/tjj.jpg" alt="Flip Card" />
+          </div>
+          <div class="card back-face">
+            <img src="/pics/Team/tjj.jpg" alt="Flip Card" />
+            <div class="info">
+              <div class="title">Vinay Tripathi</div>
+              <p>User interface designer and <br />front-end developer</p>
+            </div>
+            <ul>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Main section ends here -->
-    <!-- Script starts here -->
+      <!-- Directors section Ends -->
+      <!-- Chennai section starts -->
+      <div class="Chennai">
+        <span class="title"><h1>Chennai</h1></span>
+        <div class="wrapper">
+          <div class="card front-face">
+            <div class="front">Jay Thakur</div>
+            <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
+          </div>
+          <div class="card back-face">
+            <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
+            <div class="info">
+              <div class="title">Jay Thakur</div>
+              <p>User interface designer and <br />front-end developer</p>
+            </div>
+            <ul>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </ul>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="card front-face">
+            <div class="front">Hitesh Yadav</div>
+            <img src="/pics/Team/Hiteshsir.jpeg" alt="Flip Card" />
+          </div>
+          <div class="card back-face">
+            <img src="/pics/Team/Hiteshsir.jpeg" alt="Flip Card" />
+            <div class="info">
+              <div class="title">Hitesh Yadav</div>
+              <p>Bussiness Devlopment Manager & <br />Import Forwarding Head</p>
+            </div>
+            <ul>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </ul>
+          </div>
+        </div>
+          <div class="wrapper savan">
+            <div class="card front-face">
+              <div class="front">Savan Thakkar</div>
+              <img src="/pics/Team/tjj.jpg" alt="Flip Card" />
+            </div>
+            <div class="card back-face">
+              <img src="/pics/Team/tjj.jpg" alt="Flip Card" />
+              <div class="info">
+                <div class="title">Savan Thakkar</div>
+                <p>Customer Service Executive &<br />Import Clearing</p>
+              </div>
+              <ul>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+              </ul>
+            </div>
+          </div>
+      </div>
+      <!-- Chennai section Ends -->
+        <div class="container">
+            <div class="wrapper">
+              <div class="card front-face">
+                <div class="front">Jay Thakur</div>
+                <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
+              </div>
+              <div class="card back-face">
+                <img src="/pics/Team/Jay.jpeg" alt="Flip Card" />
+                <div class="info">
+                  <div class="title">Jay Thakur</div>
+                  <p>User interface designer and <br />front-end developer</p>
+                </div>
+                <ul>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </ul>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="card front-face">
+                <div class="front">Hitesh Yadav</div>
+                <img src="/pics/Team/Hiteshsir.jpeg" alt="Flip Card" />
+              </div>
+              <div class="card back-face">
+                <img src="/pics/Team/Hiteshsir.jpeg" alt="Flip Card" />
+                <div class="info">
+                  <div class="title">Hitesh Yadav</div>
+                  <p>Bussiness Devlopment Manager & <br />Import Forwarding Head</p>
+                </div>
+                <ul>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </ul>
+              </div>
+            </div>
+            <div class="wrapper">
+                <div class="card front-face">
+                  <div class="front">Rahul Sah</div>
+                  <img src="/pics/Team/Rahulsah.jpeg" alt="Flip Card" />
+                </div>
+                <div class="card back-face">
+                  <img src="/pics/Team/Rahulsah.jpeg" alt="Flip Card" />
+                  <div class="info">
+                    <div class="title">Rahul Sah</div>
+                    <p>ASL Head and <br />Import Clearing Manager</p>
+                  </div>
+                  <ul>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  </ul>
+                </div>
+              </div>
+              <div class="wrapper">
+                <div class="card front-face">
+                  <div class="front">Savan Thakkar</div>
+                  <img src="/pics/Team/tjj.jpg" alt="Flip Card" />
+                </div>
+                <div class="card back-face">
+                  <img src="/pics/Team/tjj.jpg" alt="Flip Card" />
+                  <div class="info">
+                    <div class="title">Savan Thakkar</div>
+                    <p>Customer Service Executive &<br />Import Clearing</p>
+                  </div>
+                  <ul>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  </ul>
+                </div>
+              </div>
+          </div>
+    </main>
+       <!-- Main section ends here -->
+       <!-- Script starts here -->
     <script src="/func.js"></script>
     <script
       type="module"
