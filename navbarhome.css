@@ -17,6 +17,7 @@
   justify-content: space-between;
   align-items: center;
   padding-left: 25px;
+  position: static;
 }
 header {
   display: flex;
@@ -50,7 +51,7 @@ ul li {
   height: 70px;
   background: #fff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-evenly;
   align-items: center;
   border-radius: 10px;
 }
