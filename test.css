@@ -41,7 +41,7 @@ header {
   white-space: nowrap;
   padding-bottom: 13px;
   color: #3781e3;
-  overflow: hidden;
+  overflow: '';
 }
 
 .titleDepartment h1:before {

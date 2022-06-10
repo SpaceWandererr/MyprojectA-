@@ -9,26 +9,30 @@
   --clr: #222327;
 }
 
-.navbar{
+.navbar {
   padding-top: 15px;
   position: sticky;
-  top:0px;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 25px;
-  position: static;
+  overflow: "";
 }
+
 header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* background-color: #0c85d6,8; */
+  background-color: #0c85d6,8;
   margin: 0px;
   /* padding: 5px; */
   border: 2px solid red;
   /* background-color: var(--clr); */
   height: 126px;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
 }
 .logo {
   cursor: pointer;
@@ -42,7 +46,7 @@ ul li {
   display: inline-block;
   font-size: 20px;
   margin-right: 33px;
-  color: #3781E3;
+  color: #3781e3;
 }
 
 .navigation {
@@ -51,7 +55,7 @@ ul li {
   height: 70px;
   background: #fff;
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
 }
@@ -124,33 +128,33 @@ ul li {
   top: -50%;
   width: 70px;
   height: 70px;
-  background: #1E90FF;/*107bdf; */
+  background: #1e90ff; /*107bdf; */
   border-radius: 50%;
   border: 6px solid var(--clr);
   transition: 0.5s;
 }
 
-.indicator::before{
-    content: '';
-    position: absolute;
-    top:50%;
-    left: -22px;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border-top-right-radius: 20px;
-    box-shadow: 0px -10px 0 0 var(--clr);
+.indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 var(--clr);
 }
-.indicator::after{
-    content: '';
-    position: absolute;
-    top:50%;
-    right: -21px;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border-top-left-radius: 25px;
-    box-shadow: 0px -10px 0 0 var(--clr);
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -21px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 25px;
+  box-shadow: 0px -10px 0 0 var(--clr);
 }
 
 .navigation ul li:nth-child(1).active ~ .indicator {
