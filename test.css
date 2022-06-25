@@ -67,17 +67,36 @@ header {
 /* Chennia section Ends */
 .Chennai {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: repeat(1, 2fr);
+  row-gap: 5px;
+  padding-top: 1%;
+}
+.Chennaisales {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 2fr);
+  padding-top: 1%;
+}
+.Rajasthan {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
   grid-template-rows: repeat(2, 2fr);
   row-gap: 5px;
   padding-top: 1%;
 }
-.savan {
+.Rajasthansales {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 2fr);
+  padding-top: 1%;
+}
+/* .sonu {
   grid-row-start: 2;
   grid-row-end: 2;
   grid-column-start: 2;
   grid-column-end: 2;
-}
+} */
 /* Chennai section Ends */
 
 /* CSS of Cards starts */
@@ -99,6 +118,7 @@ header {
   border-radius: 0px 0px 10px 0px;
   padding-right: 5px;
   font-size: 14px;
+  
 }
 ::selection {
   color: #fff;
@@ -111,6 +131,7 @@ header {
   transform-style: preserve-3d;
   perspective: 1000px;
   overflow: hidden;
+  
 }
 .wrapper .card {
   position: absolute;
@@ -125,6 +146,7 @@ header {
   transform-style: preserve-3d;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+
 }
 .wrapper:hover > .front-face {
   transform: rotateY(-180deg);
@@ -134,6 +156,7 @@ header {
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
+  
 }
 .wrapper .back-face {
   display: flex;

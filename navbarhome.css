@@ -30,8 +30,8 @@ header {
   border: 2px solid red;
   /* background-color: var(--clr); */
   height: 126px;
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
   overflow: hidden;
 }
 .logo {
