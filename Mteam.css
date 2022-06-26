@@ -30,6 +30,10 @@ header {
   height: 100%;
   width: -webkit-fill-available;
 }
+.vinay {
+  margin-left: 50%;
+}
+/* Directors section ends */
 .titleDepartment h1 {
   font-size: 26px;
   font-weight: 700;
@@ -41,6 +45,7 @@ header {
   white-space: nowrap;
   padding-bottom: 13px;
   color: #3781e3;
+  overflow: '';
 }
 
 .titleDepartment h1:before {
@@ -63,21 +68,57 @@ header {
   margin-bottom: 0.25em;
 }
 /* Directors section Ends */
-/* Chennia section Ends */
+/* Chennai section starts */
 .Chennai {
   display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: repeat(1, 2fr);
+  row-gap: 5px;
+  padding-top: 1%;
+}
+.Chennaisales {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(1, 2fr); */
+}
+.simran{
+  margin-left: 50%;
+}
+/* Chennai section Ends */
+/* Mumbai section starts*/
+.mumbaisales {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(1, 2fr); */
+}
+.hetal{
+  margin-left: 50%;
+}
+/* Mumbai section ends*/
+/* Rajasthan section starts */
+.Rajasthan {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
   grid-template-rows: repeat(2, 2fr);
   row-gap: 5px;
   padding-top: 1%;
 }
-.savan {
-  grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 2;
+.Rajasthansales {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 2fr);
+  padding-top: 1%;
 }
-/* Chennai section Ends */
+.vinayb{
+  grid-column-start: 2;
+  margin-left: 50%;
+}
+.ganga{
+  grid-column-start: 2;
+  margin-left: 50%;
+}
+/* Rajasthan section ends*/
+
 
 /* CSS of Cards starts */
 
@@ -98,6 +139,7 @@ header {
   border-radius: 0px 0px 10px 0px;
   padding-right: 5px;
   font-size: 14px;
+  
 }
 ::selection {
   color: #fff;
@@ -110,6 +152,7 @@ header {
   transform-style: preserve-3d;
   perspective: 1000px;
   overflow: hidden;
+  
 }
 .wrapper .card {
   position: absolute;
@@ -124,6 +167,7 @@ header {
   transform-style: preserve-3d;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+
 }
 .wrapper:hover > .front-face {
   transform: rotateY(-180deg);
@@ -133,6 +177,7 @@ header {
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
+  
 }
 .wrapper .back-face {
   display: flex;
