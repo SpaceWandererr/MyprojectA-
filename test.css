@@ -30,6 +30,10 @@ header {
   height: 100%;
   width: -webkit-fill-available;
 }
+.vinay {
+  margin-left: 50%;
+}
+/* Directors section ends */
 .titleDepartment h1 {
   font-size: 26px;
   font-weight: 700;
@@ -64,7 +68,7 @@ header {
   margin-bottom: 0.25em;
 }
 /* Directors section Ends */
-/* Chennia section Ends */
+/* Chennai section starts */
 .Chennai {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
@@ -74,10 +78,24 @@ header {
 }
 .Chennaisales {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 2fr);
-  padding-top: 1%;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(1, 2fr); */
 }
+.simran{
+  margin-left: 50%;
+}
+/* Chennai section Ends */
+/* Mumbai section starts*/
+.mumbaisales {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(1, 2fr); */
+}
+.hetal{
+  margin-left: 50%;
+}
+/* Mumbai section ends*/
+/* Rajasthan section starts */
 .Rajasthan {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
@@ -91,13 +109,8 @@ header {
   grid-template-rows: repeat(1, 2fr);
   padding-top: 1%;
 }
-/* .sonu {
-  grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 2;
-} */
-/* Chennai section Ends */
+/* Rajasthan section ends*/
+
 
 /* CSS of Cards starts */
 
